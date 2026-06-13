@@ -251,6 +251,18 @@ h1 em, h2 em { color: var(--cyan-strong); font-style: normal; }
 .button-support { min-height: 42px; border-color: rgba(243,162,77,.35); color: #ffc280; background: rgba(243,162,77,.1); cursor: pointer; }
 .button-support:hover { background: rgba(243,162,77,.18); box-shadow: 0 12px 35px rgba(243,162,77,.12); }
 
+.author-section { padding: 30px 24px 10px; }
+.author-inner { max-width: 980px; margin: 0 auto; padding: 30px 32px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(135deg, rgba(12,31,40,.82), rgba(7,16,22,.72)); }
+.author-inner > img { width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 0 32px rgba(100,216,245,.13); }
+.author-copy h2 { margin: 12px 0 7px; font-size: 22px; }
+.author-copy h2 small { color: var(--cyan); font-size: 12px; font-weight: 600; }
+.author-copy p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.author-contact { min-width: 190px; padding-left: 24px; border-left: 1px solid var(--line); }
+.author-contact span, .author-contact strong { display: block; }
+.author-contact span { color: #738d96; font-size: 9px; }
+.author-contact strong { margin: 6px 0 12px; color: var(--cyan-strong); font-size: 18px; letter-spacing: .06em; }
+.button-copy { min-height: 34px; padding: 0 14px; border-color: rgba(100,216,245,.3); color: var(--cyan); background: rgba(100,216,245,.08); cursor: pointer; font-size: 10px; }
+
 .download-section { padding: 90px 24px 120px; }
 .download-inner { max-width: 980px; min-height: 400px; margin: 0 auto; padding: 65px 30px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden; border: 1px solid rgba(100,216,245,.22); border-radius: 22px; background: linear-gradient(rgba(5,13,18,.5), rgba(5,13,18,.9)), url("assets/Mican_background.png") center/cover; box-shadow: 0 25px 80px rgba(0,0,0,.38); }
 .download-inner::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(100,216,245,.1), transparent 45%); }
@@ -321,6 +333,8 @@ body.modal-open { overflow: hidden; }
   .security-card { right: 8px; }
   .support-inner { grid-template-columns: auto 1fr; padding: 24px; }
   .support-inner .button-support { grid-column: 1 / -1; }
+  .author-inner { grid-template-columns: auto 1fr; padding: 24px; }
+  .author-contact { grid-column: 1 / -1; padding: 18px 0 0; border-top: 1px solid var(--line); border-left: 0; }
   .stack-row { grid-template-columns: repeat(2, 1fr); }
   .stack-row span:nth-child(2) { border-right: 0; }
   .stack-row span:nth-child(-n+2) { border-bottom: 1px solid var(--line); }

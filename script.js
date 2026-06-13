@@ -60,3 +60,17 @@ supportCloseButtons.forEach((button) => button.addEventListener("click", closeSu
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !supportModal.hidden) closeSupportModal();
 });
+
+document.querySelectorAll("[data-copy-qq]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const qq = button.dataset.copyQq;
+    try {
+      await navigator.clipboard.writeText(qq);
+      const original = button.textContent;
+      button.textContent = "已复制";
+      setTimeout(() => { button.textContent = original; }, 1600);
+    } catch {
+      window.prompt("复制交流群号：", qq);
+    }
+  });
+});
