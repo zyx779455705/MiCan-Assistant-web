@@ -11,7 +11,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   color: var(--text);
@@ -104,7 +104,8 @@ h1 em, h2 em { color: var(--cyan-strong); font-style: normal; }
 
 .app-preview-wrap { position: relative; perspective: 1200px; }
 .app-preview {
-  min-width: 690px;
+  width: min(690px, 100%);
+  min-width: 0;
   height: 440px;
   display: flex;
   overflow: hidden;
@@ -119,11 +120,11 @@ h1 em, h2 em { color: var(--cyan-strong); font-style: normal; }
 .app-sidebar { width: 160px; padding: 20px 14px; border-right: 1px solid var(--line); background: rgba(4,10,15,.78); }
 .app-logo { display: flex; align-items: center; gap: 8px; color: var(--cyan); font-weight: 800; font-size: 14px; }
 .app-logo img { width: 27px; height: 27px; border-radius: 7px; }
-.app-subtitle { display: block; margin: 6px 0 27px; color: #55727c; font-size: 8px; }
-.app-nav { display: grid; gap: 7px; }
-.app-nav span { padding: 9px 10px; color: #77919a; border: 1px solid transparent; border-radius: 7px; font-size: 10px; }
+.app-subtitle { display: block; margin: 6px 0 16px; color: #55727c; font-size: 8px; }
+.app-nav { max-height: 255px; display: grid; gap: 4px; overflow: hidden; }
+.app-nav span { padding: 6px 8px; color: #77919a; border: 1px solid transparent; border-radius: 6px; font-size: 8px; white-space: nowrap; }
 .app-nav .active { color: var(--cyan); border-color: rgba(100,216,245,.18); background: rgba(100,216,245,.08); }
-.app-account { margin-top: 90px; padding: 10px; border: 1px solid var(--line); border-radius: 8px; }
+.app-account { margin-top: 12px; padding: 9px; border: 1px solid var(--line); border-radius: 8px; }
 .app-account b, .app-account small { display: block; }
 .app-account b { color: #bfd3da; font-size: 10px; }
 .app-account small { margin-top: 4px; color: #56dc91; font-size: 8px; }
@@ -303,6 +304,9 @@ body.modal-open { overflow: hidden; }
   .hero-copy { max-width: 650px; }
   .app-preview-wrap { max-width: 760px; }
   .tool-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 1200px) {
+  .orbit { display: none; }
 }
 @media (max-width: 760px) {
   .site-header { top: 10px; height: 58px; }
