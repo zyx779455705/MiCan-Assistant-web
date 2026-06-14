@@ -145,13 +145,6 @@ h1 em, h2 em { color: var(--cyan-strong); font-style: normal; }
 .app-cards strong { color: #56dc91; font-weight: 600; }
 .app-status { margin-top: 13px; padding: 9px 12px; display: flex; justify-content: space-between; border: 1px solid var(--line); border-radius: 7px; color: #637f89; font-size: 8px; }
 .app-status b { color: #a3bdc6; }
-.floating-card { position: absolute; z-index: 2; padding: 10px 14px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(100,216,245,.23); border-radius: 10px; background: rgba(8,19,25,.9); box-shadow: 0 14px 35px rgba(0,0,0,.4); backdrop-filter: blur(10px); }
-.floating-card span { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; color: #091114; background: #65dba0; font-weight: 800; }
-.floating-card b, .floating-card small { display: block; font-size: 10px; }
-.floating-card small { margin-top: 3px; color: #6f8a94; font-size: 7px; }
-.floating-card-top { top: -25px; right: -12px; }
-.floating-card-bottom { bottom: -23px; left: 70px; }
-.floating-card-bottom span { background: var(--cyan); }
 .orbit { position: absolute; border: 1px solid rgba(100,216,245,.13); border-radius: 50%; }
 .orbit-one { width: 520px; height: 520px; top: -45px; right: -50px; }
 .orbit-two { width: 620px; height: 280px; top: 100px; right: -100px; transform: rotate(-16deg); }
@@ -323,7 +316,6 @@ body.modal-open { overflow: hidden; }
   .app-preview-wrap { width: 100%; overflow: hidden; }
   .app-preview { min-width: 660px; transform: scale(.62); transform-origin: top left; }
   .app-preview-wrap { height: 295px; }
-  .floating-card { display: none; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 30px 0; }
   .stats div:nth-child(2) { border: 0; }
   .section { padding: 85px 18px; }
